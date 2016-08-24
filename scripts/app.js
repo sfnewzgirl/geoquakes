@@ -27,12 +27,15 @@ $(document).on("ready", function() {
 
     var quakeTemplate = Handlebars.compile(source);
 
-    var quakeHtml = quakeTemplate({
-      magnitude: jsonData.features[0].properties.mag,
-      quake_location: jsonData.features[0].properties.place,
-    });
+    var quakeHtml = quakeTemplate({earthquakes: jsonData.features });
+
+    // var quakeHtml = quakeTemplate({
+    //   magnitude: jsonData.features[i].properties.mag,
+    //   quake_location: jsonData.features[i].properties.place,
+    // });
+
     console.log(quakeHtml);
 
-    $("quake_list").append(quakeHtml);
+    $("#quake_list").append(quakeHtml);
 
   };

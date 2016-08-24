@@ -36,9 +36,9 @@
 						<h1>Earthquakes from the past week:</h1>
 						<div id="quake_list">
 						<script id="recent_earthquakes" type="text/x-handlebars-template">
-							<!-- {{#each earthquake}} -->
-							<p>{{magnitude}} - {{quake_location}}</p>
-							<!-- {{/each}} -->
+							{{#each earthquakes}}
+							<p>{{properties.mag}} - {{properties.place}}</p>
+							{{/each}}
 						</script>
 						</div>
 					</div>
