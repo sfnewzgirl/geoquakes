@@ -20,21 +20,16 @@ $(document).on("ready", function() {
     //console.log(json.features[0]);
 
     var jsonData = json;
-    console.log("heres our data:", jsonData);
+//    console.log("heres our data:", jsonData);
 
     var source = $('#recent_earthquakes').html();
-      console.log(source);
+//      console.log(source);
 
     var quakeTemplate = Handlebars.compile(source);
 
     var quakeHtml = quakeTemplate({earthquakes: jsonData.features });
 
-    // var quakeHtml = quakeTemplate({
-    //   magnitude: jsonData.features[i].properties.mag,
-    //   quake_location: jsonData.features[i].properties.place,
-    // });
-
-    console.log(quakeHtml);
+//    console.log(quakeHtml);
 
     $("#quake_list").append(quakeHtml);
 
